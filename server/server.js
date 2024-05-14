@@ -13,10 +13,6 @@ const PORT = 3001 || process.env.PORT;
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send("Hello, World!");
-});
-
 const authRoutes = require('./routes/auth'); // Import authentication routes
 app.use('/auth', authRoutes); // Use authentication routes
 
